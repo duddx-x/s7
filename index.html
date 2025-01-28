@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amo você ♥</title>
+    <link rel="shortcut icon" href="coracao.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Abra a cartinha</h1>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>AMO VOCÊ</strong>
+                        <p>
+                            AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO AMO
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+
+    <div class="content-popup" id="popup">
+        <img src="text.gif" alt="Animação" class="gif" width="300">
+        <img src="kyle.png" alt="Imagem Surpresa" class="popup-image">
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+    </div>
+
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        const popup = document.getElementById('popup'); // Seleciona o bloco de conteúdo
+
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap'); // Controla a animação da cartinha
+            if (envelope.classList.contains('flap')) {
+                setTimeout(() => {
+                    popup.classList.add('show'); // Mostra o bloco após um pequeno atraso
+                }, 1000); // Atraso de 1 segundo (ajuste conforme necessário)
+            }
+        });
+    </script>
+</body>
+</html>
